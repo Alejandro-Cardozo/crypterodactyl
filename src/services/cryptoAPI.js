@@ -7,8 +7,6 @@ const cryptoApiHeaders = {
 
 const baseUrl = process.env.REACT_APP_CRYPTOS_URL;
 
-console.log(baseUrl);
-
 const createRequest = (url) => ({ url, headers: cryptoApiHeaders });
 
 export const cryptoAPI = createApi({
