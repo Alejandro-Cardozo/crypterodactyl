@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 
 import { Button, Menu, Typography, Avatar } from 'antd';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   HomeOutlined,
-  MoneyCollectOutlined,
   BulbOutlined,
   FundOutlined,
   MenuOutlined,
@@ -15,6 +14,8 @@ import icon from '../images/crypto.png';
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
   const [screenSize, setScreenSize] = useState(null);
+
+  let location = useLocation();
 
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
@@ -46,17 +47,14 @@ const Navbar = () => {
         </Button>
       </div>
       {activeMenu && (
-        <Menu theme='dark'>
-          <Menu.Item icon={<HomeOutlined />}>
+        <Menu theme='dark' defaultSelectedKeys={[location.pathname]}>
+          <Menu.Item key="/" icon={<HomeOutlined />}>
             <Link to='/'>Home</Link>
           </Menu.Item>
-          <Menu.Item icon={<FundOutlined />}>
+          <Menu.Item key="/cryptocurrencies" icon={<FundOutlined />}>
             <Link to='/cryptocurrencies'>Cryptocurrencies</Link>
           </Menu.Item>
-          <Menu.Item icon={<MoneyCollectOutlined />}>
-            <Link to='/exchanges'>Exchanges</Link>
-          </Menu.Item>
-          <Menu.Item icon={<BulbOutlined />}>
+          <Menu.Item key="/news" icon={<BulbOutlined />}>
             <Link to='/news'>News</Link>
           </Menu.Item>
         </Menu>
