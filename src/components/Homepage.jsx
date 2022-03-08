@@ -14,6 +14,8 @@ const Homepage = () => {
 
   if (isFetching) return <Loader />;
 
+  if (!globalStats) return <Loader />;
+
   return (
     <>
       <Title level={2} className='heading'>

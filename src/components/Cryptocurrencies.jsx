@@ -34,8 +34,8 @@ const Cryptocurrencies = ({ simplified }) => {
       )}
       <Row gutter={[32, 32]} className='crypto-card-container'>
         {cryptos?.map((currency) => (
-          <Col xs={48} sm={24} lg={12} xl={6} className='crypto-card' key={currency.id}>
-            <Link to={`/crypto/${currency.id}`}>
+          <Col xs={48} sm={24} lg={12} xl={6} className='crypto-card' key={currency.uuid}>
+            <Link to={`/crypto/${currency.uuid}`}>
               <Card
                 hoverable
                 title={`${currency.rank}. ${currency.name}`}
