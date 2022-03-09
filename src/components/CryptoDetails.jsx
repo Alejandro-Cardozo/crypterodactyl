@@ -43,23 +43,27 @@ const CryptoDetails = () => {
   const stats = [
     {
       title: 'Price to USD',
-      value: `$ ${cryptoDetails.price && millify(cryptoDetails.price)}`,
+      value: `$ ${cryptoDetails.price && millify(cryptoDetails.price ?? 0)}`,
       icon: <DollarCircleOutlined />,
     },
     { title: 'Rank', value: cryptoDetails.rank, icon: <NumberOutlined /> },
     {
       title: '24h Volume',
-      value: `$ ${cryptoDetails['24hVolume'] && millify(cryptoDetails['24hVolume'])}`,
+      value: `$ ${
+        cryptoDetails['24hVolume'] && millify(cryptoDetails['24hVolume'] ?? 0)
+      }`,
       icon: <ThunderboltOutlined />,
     },
     {
       title: 'Market Cap',
-      value: `$ ${cryptoDetails.marketCap && millify(cryptoDetails.marketCap)}`,
+      value: `$ ${
+        cryptoDetails.marketCap && millify(cryptoDetails.marketCap ?? 0)
+      }`,
       icon: <DollarCircleOutlined />,
     },
     {
       title: 'All-time-high(daily avg.)',
-      value: `$ ${millify(cryptoDetails.allTimeHigh.price)}`,
+      value: `$ ${millify(cryptoDetails.allTimeHigh.price ?? 0)}`,
       icon: <TrophyOutlined />,
     },
   ];
@@ -86,12 +90,12 @@ const CryptoDetails = () => {
     },
     {
       title: 'Total Supply',
-      value: `$ ${millify(cryptoDetails.supply.total)}`,
+      value: `$ ${millify(cryptoDetails.supply.total ?? 0)}`,
       icon: <ExclamationCircleOutlined />,
     },
     {
       title: 'Circulating Supply',
-      value: `$ ${millify(cryptoDetails.supply.circulating)}`,
+      value: `$ ${millify(cryptoDetails.supply.circulating ?? 0)}`,
       icon: <ExclamationCircleOutlined />,
     },
   ];
