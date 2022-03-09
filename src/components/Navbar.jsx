@@ -40,21 +40,26 @@ const Navbar = () => {
       <div className='logo-container'>
         <Avatar src={icon} size='large' />
         <Typography.Title level={2} className='logo'>
-          <Link style={{color: 'white', fontFamily:'sans-serif'}} to='/'>Crypterodactyl</Link>
+          <Link style={{ color: 'white', fontFamily: 'sans-serif' }} to='/'>
+            Crypterodactyl
+          </Link>
         </Typography.Title>
-        <Button className='menu-control-container' onClick={() => setActiveMenu(prev => !prev)}>
+        <Button
+          className='menu-control-container'
+          onClick={() => setActiveMenu((prev) => !prev)}
+        >
           <MenuOutlined />
         </Button>
       </div>
       {activeMenu && (
         <Menu theme='dark' defaultSelectedKeys={[location.pathname]}>
-          <Menu.Item key="/" icon={<HomeOutlined />}>
+          <Menu.Item key='/' icon={<HomeOutlined />}>
             <Link to='/'>Home</Link>
           </Menu.Item>
-          <Menu.Item key="/cryptocurrencies" icon={<FundOutlined />}>
+          <Menu.Item key='/cryptocurrencies' icon={<FundOutlined />}>
             <Link to='/cryptocurrencies'>Cryptocurrencies</Link>
           </Menu.Item>
-          <Menu.Item key="/news" icon={<BulbOutlined />}>
+          <Menu.Item key='/news' icon={<BulbOutlined />}>
             <Link to='/news'>News</Link>
           </Menu.Item>
         </Menu>

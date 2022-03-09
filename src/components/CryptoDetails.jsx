@@ -49,7 +49,7 @@ const CryptoDetails = () => {
     { title: 'Rank', value: cryptoDetails.rank, icon: <NumberOutlined /> },
     {
       title: '24h Volume',
-      value: `$ ${cryptoDetails.volume && millify(cryptoDetails.volume)}`,
+      value: `$ ${cryptoDetails['24hVolume'] && millify(cryptoDetails['24hVolume'])}`,
       icon: <ThunderboltOutlined />,
     },
     {
@@ -77,7 +77,7 @@ const CryptoDetails = () => {
     },
     {
       title: 'Approved Supply',
-      value: cryptoDetails.approvedSupply ? (
+      value: cryptoDetails.supply.confirmed ? (
         <CheckOutlined />
       ) : (
         <StopOutlined />
@@ -100,7 +100,7 @@ const CryptoDetails = () => {
     <Col className='coin-detail-container'>
       <Col className='coin-heading-container'>
         <Title level={2} className='coin-name'>
-          {cryptoDetails.name} ({cryptoDetails.slug}) Price
+          {cryptoDetails.name} ({cryptoDetails.symbol}) Price
         </Title>
         <p>
           {cryptoDetails.name} live price in US dollars. View value statistics,
@@ -162,8 +162,8 @@ const CryptoDetails = () => {
         <Row className='coin-desc'>
           <Title level={3} className='coin-details-heading'>
             What is {cryptoDetails.name}
-            {HTMLReactParser(cryptoDetails.description)}
           </Title>
+          <Text>{HTMLReactParser(cryptoDetails.description)}</Text>
         </Row>
         <Col className='coin-links'>
           <Title level={3} className='coin-details-heading'>

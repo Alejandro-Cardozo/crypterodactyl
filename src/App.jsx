@@ -11,6 +11,8 @@ import {
 import './App.css';
 
 function App() {
+  const d = new Date();
+  let year = d.getFullYear();
   return (
     <div className='App'>
       <div className='navbar'>
@@ -32,7 +34,7 @@ function App() {
             level={5}
             style={{ color: 'white', textAlign: 'center' }}
           >
-            Crypterodactyl <br />
+            Crypterodactyl &copy; {year} <br />
             All rights reserved
           </Typography.Title>
           <Space>
