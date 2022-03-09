@@ -1,8 +1,66 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="https://crypterodactyl.netlify.app/" rel="noopener">
+ <img width=200px height=200px src="src/images/crypto.png" alt="Project logo"></a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">Crypterodactyl</h3>
 
-## Available Scripts
+<div align="center">
+
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+</div>
+
+---
+
+<p align="center"> Your daily cryptocurrency status report
+    <br> 
+</p>
+
+## Table of Contents
+
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [Authors](#authors)
+
+## About <a name = "about"></a>
+
+The idea of this project is to give minute-by-minute information about the most relevant cryptocurrencies in the current market.
+
+## Getting Started <a name = "getting_started"></a>
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+You will need to have [Nodejs](https://nodejs.org/en/) in your system.
+
+Check the documentation to install it on your system.
+
+Also, you'll need two api keys, one from [Bing News Search](https://www.microsoft.com/en-us/bing/apis/bing-news-search-api) and another from [CoinRanking](https://developers.coinranking.com/api). Once you get them, create a .env file in the root of your project and use them there.
+
+### Installing
+
+Once you have Node Js on your system, run `npm install` in order to get all the dependencies needed. You can see in the package.json all the scripts.
+
+```
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+```
+
+## Usage <a name="usage"></a>
+
+<img width="100%" src="src/images/Screenshot.png" alt="Project overview"></a>
+
+You can make changes in the components and pages folders.
 
 In the project directory, you can run:
 
@@ -39,32 +97,20 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Deployment <a name = "deployment"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+You can deploy this page to Netlify.
 
-### Code Splitting
+## Built Using <a name = "built_using"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Ant Design](https://ant.design/) - The world's second most popular React UI framework
+- [Redux](https://redux.js.org/) - A Predictable State Container for JS Apps
+- [Chart.js](https://www.chartjs.org/) - Simple yet flexible JavaScript charting for designers & developers
+- [Create React App](https://create-react-app.dev/) - The best way to start building a new single-page application in React.
 
-### Analyzing the Bundle Size
+## ✍️ Authors <a name = "authors"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [@alejandrocardozo](https://github.com/Alejandro-Cardozo) - Build by
+- [@adrianhajdin](https://github.com/adrianhajdin) - Idea & Initial Work
