@@ -15,13 +15,20 @@ const demoImage =
 const News = ({ simplified }) => {
   const [newsCategory, setNewsCategory] = useState('Cryptocurrency');
 
-  const { data: cryptoNews } = useGetCryptoNewsQuery({
+  const { data: cryptoNews, isLoading } = useGetCryptoNewsQuery({
     newsCategory,
     count: simplified ? 6 : 12,
   });
   const { data } = useGetCryptosQuery(100);
 
-  if (!cryptoNews?.value) return <Loader />;
+  if (!cryptoNews?.value && isLoading) return <Loader />;
+
+  if (!cryptoNews?.value && !isLoading)
+    return (
+      <p className='reqError'>
+        Oops, there was a problem with your request. Try again later.
+      </p>
+    );
 
   return (
     <Row gutter={[24, 24]}>
@@ -39,8 +46,10 @@ const News = ({ simplified }) => {
                 .indexOf(input.toLocaleLowerCase()) >= 0
             }
           >
-            <Option value="Cryptocurrency">Cryptocurrency</Option>
-            {data?.data?.coins.map(coin => <Option value={coin.name}>{coin.name}</Option>)}
+            <Option value='Cryptocurrency'>Cryptocurrency</Option>
+            {data?.data?.coins.map((coin) => (
+              <Option value={coin.name}>{coin.name}</Option>
+            ))}
           </Select>
         </Col>
       )}
